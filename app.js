@@ -25,3 +25,6 @@ document.getElementById("em").addEventListener("click",function(){var o=build();
 // laptop filter
 var chips=document.querySelectorAll("[data-f]");
 if(chips.length){var laps=document.querySelectorAll(".lap");chips.forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-f");chips.forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});laps.forEach(function(l){l.hidden=!(k==="all"||l.getAttribute("data-tags").split(" ").indexOf(k)>-1)})})})}
+// HrifWriting: "What is your assignment?" opens WhatsApp with the typed text
+var as=document.getElementById("assign"),go=document.getElementById("assignGo");
+if(as&&go){function upA(){var t=as.value.trim();go.href="https://wa.me/233245688354?text="+encodeURIComponent("Hello HrifWriting, my assignment is: "+(t||"(I will explain on WhatsApp)"))}as.addEventListener("input",upA);upA()}
